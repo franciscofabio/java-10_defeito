@@ -7,8 +7,14 @@ import java.util.Optional;
 
 public interface AccelerationServiceInterface extends ServiceInterface<Acceleration> {
 
+    List<Acceleration> findAll();
+
     Optional<Acceleration> findById(Long id);
 
+    Optional<Acceleration> findByName(String name);
+
     List<Acceleration> findByCompanyId(Long companyId);
+
+    Acceleration save(Acceleration acceleration);
 
 }
